@@ -5,7 +5,6 @@ import './App.css'
 import { BrowserRouter,Routes, Route, Link } from 'react-router-dom'
 import App1 from "./components/App1";
 import App2 from "./components/App2";
-import "./App.css";
 function App() {
   return (
     <BrowserRouter>
@@ -22,7 +21,7 @@ function App() {
           <Route path="/app2" element={<App2/>}></Route>
         </Routes>
       </main>
-      <footer style="text-align: center;">
+      <footer>
         &copy; All rights reserved.
       </footer>
     </BrowserRouter>
