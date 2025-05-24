@@ -1,0 +1,7 @@
+.fruit-box {
+  border: 2px solid black;
+  padding: 40px;
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+}
