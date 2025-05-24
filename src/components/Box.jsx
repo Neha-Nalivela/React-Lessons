@@ -9,9 +9,7 @@ export default function Box(props) {
   //     return <Box2 />;
   //   }
   //Method 2 using ternary operator
-  {
     return props.flag === 1 ? <Box1 /> : <Box2 />;
-  }
 
   ///Method 3
   //   if (props.flag === 1) return <Box1 />;
