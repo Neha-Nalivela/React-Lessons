@@ -4,4 +4,7 @@
   width: 120px;
   text-align: center;
   font-weight: bold;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }

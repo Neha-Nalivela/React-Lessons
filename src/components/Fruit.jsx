@@ -1,10 +1,9 @@
 import React from "react";
-import "./Fruit.css";
-
-export default function Fruit({ name }) {
+import "./Fruit.css"
+export default function Fruit(props) {
   return (
-    <div className="fruit-box">
-      {name}
+    <div>
+      <div className="fruit-box">{props.name}</div>
     </div>
   );
 }
