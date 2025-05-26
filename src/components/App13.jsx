@@ -19,29 +19,28 @@ export default function App13() {
       <h2>Assignment</h2>
       <div>
         <div className="App13-Row">
-          <div>
+          <div className="Box">
             <h4>Addition</h4>
             100+{num}={result1}
           </div>
-          <div>
+          <div className="Box">
             <h4>Subtraction</h4>
             100-{num}={result2}
           </div>
         </div>
-        <p>
-          <input type="number" onChange={(e)=>setNum(e.target.value)} />
-        </p>
         <div className="App13-Row">
-          <div>
+          <input type="number" style={{ width: "370px" }} onChange={(e)=>setNum(e.target.value)} placeholder="Enter a number:"/></div>
+        </div>
+        <div className="App13-Row">
+          <div className="Box">
             <h4>Multiplication</h4>
             100x{num}={result3}
           </div>
-          <div>
+          <div className="Box">
             <h4>Division</h4>
             100/{num}={result4}
           </div>
         </div>
       </div>
-    </div>
   );
 }
