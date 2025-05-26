@@ -15,6 +15,7 @@ import App11 from "./components/App11";
 import App12 from "./components/App12";
 import App13 from "./components/App13";
 import App14 from "./components/App14";
+import App15 from "./components/App15";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -29,17 +30,19 @@ function App() {
         <Route path="/app2" element={<App2 />}></Route>
         <Route path="/app3" element={<App3 />}></Route>
         <Route path="/app4" element={<App4 />}></Route>
-         <Route path="/app5" element={<App5 />}></Route>
-         <Route path="/app6" element={<App6 />}></Route>
-         <Route path="/app7" element={<App7 />}></Route>
-         <Route path="/app8" element={<App8 />}></Route>
-         <Route path="/app9" element={<App9 />}></Route>
-         <Route path="/app10" element={<App10 />}></Route>
-         <Route path="/app11" element={<App11 />}></Route>
-         <Route path="/app12" element={<App12 />}></Route>
-         <Route path="/app13" element={<App13 />}></Route>
-         <Route path="/app14" element={<App14 />}></Route>
-         </Routes>
+        <Route path="/app5" element={<App5 />}></Route>
+        <Route path="/app6" element={<App6 />}></Route>
+        <Route path="/app7" element={<App7 />}></Route>
+        <Route path="/app8" element={<App8 />}></Route>
+        <Route path="/app9" element={<App9 />}></Route>
+        <Route path="/app10" element={<App10 />}></Route>
+        <Route path="/app11" element={<App11 />}></Route>
+        <Route path="/app12" element={<App12 />}></Route>
+        <Route path="/app13" element={<App13 />}></Route>
+        <Route path="/app14" element={<App14 />}></Route>
+        <Route path="/app15" element={<App15 />}></Route>
+
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
