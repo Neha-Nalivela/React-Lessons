@@ -1,0 +1,37 @@
+.Score {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px; /* smoother curve */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px;
+    width: 300px;
+    margin-left: 50px;
+    border-width: 20px;
+    border: 2px solid #ccc;
+}
+.Result{
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px; /* smoother curve */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px;
+    margin-right: 25px;
+    border: 2px solid #ccc;
+}
+.OverAll{
+    display: flex;
+}
+.h3{
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    
+}

@@ -25,9 +25,10 @@ export default function App19() {
     <div>
       <h1>App19</h1>
       <h2>Assignment</h2>
-      <div className="Score">
-        <h3>Cricket Score Board</h3>
-        <div>
+      <h3 className="h3">Cricket Score Board</h3>
+      <div className="OverAll">
+        
+        <div className="Score">
           <p>Runs: {run}</p>
           <button onClick={handleRun}>Run</button>
           <p>Wickets: {wicket}</p>
