@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./App19.css";
+import { useNavigate } from "react-router-dom";
 export default function App19() {
   const [run, setRun] = useState(0);
   const [wicket, setWicket] = useState(0);
   const [result, setResult] = useState("");
-
+  const Navigate = useNavigate();
   const GameOver = wicket >= 10;
 
   const handleRun = () => {
@@ -20,6 +21,10 @@ export default function App19() {
       setResult("Better Luck Next Time");
     }
   };
+
+  const navToApp1 = () => {
+    Navigate("/")
+  }
 
   return (
     <div>
@@ -39,6 +44,9 @@ export default function App19() {
           <p>{GameOver ? "Game Over" : ""}</p>
         </div>
       </div>
+      <hr/>
+
+      <p><button onClick={navToApp1}>Go to App1</button></p>
     </div>
   );
 }
