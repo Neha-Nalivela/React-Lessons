@@ -1,42 +1,39 @@
-import React, { useContext, useState } from 'react';
-import { AppContext } from './App21';
-
+import React, { useState } from "react";
+import { AppContext } from "./App21";
+import { useContext } from "react";
 export default function Login() {
-  const { setUser, message, setMessage } = useContext(AppContext);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (email && password) {
-      setUser({ email });
-      setMessage('Login Successful!');
+  const { users } = useContext(AppContext);
+  const [user, setUser] = useState({});
+  const [msg, setMsg] = useState();
+  const handleSubmit = () => {
+    const found = users.find(
+      (value) => value.email === user.email && value.pass === user.pass
+    );
+    if (found) {
+      setMsg("Welcome " + found.name);
     } else {
-      setMessage('Please enter all fields');
+      setMsg("Invalid User or Password");
     }
   };
-
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form onSubmit={handleLogin}>
+    <div style={{ margin: "30px" }}>
+      <h3>Login</h3>
+      {msg}
+      <p>
         <input
-          type="email"
-          placeholder="Enter Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="Email address"
+          onChange={(e) => setUser({ ...user, email: e.target.value })}
         />
-        <p>
-            <input
-              type="password"
-              placeholder="Enter Your Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-        </p>
-        <button type="submit">Submit</button>
-      </form>
-      <div>{message}</div>
+      </p>
+      <p>
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setUser({ ...user, pass: e.target.value })}
+        />
+      </p>
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 }

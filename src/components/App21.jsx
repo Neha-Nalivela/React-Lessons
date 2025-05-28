@@ -1,19 +1,24 @@
-import React, { useState, createContext } from 'react';
-import Register from './Register';
-import Login from './Login';
-
+import React from "react";
+import Register from "./Register";
+import Login from "./Login";
+import { useState } from "react";
+import { createContext } from "react";
 export const AppContext = createContext();
-
 export default function App21() {
-  const [user, setUser] = useState(null);
-  const [message, setMessage] = useState('');
-
+  const [users, setUsers] = useState([]);
   return (
     <div>
-      <h1>Registration Form</h1>
-      <AppContext.Provider value={{ user, setUser, message, setMessage }}>
-        <Register />
-        <Login />
+      <AppContext.Provider value={{ users, setUsers }}>
+        <h1>App21</h1>
+        <h2>Assignment</h2>
+        <div style={{ display: "flex" }}>
+          <div>
+            <Register />
+          </div>
+          <div>
+            <Login />
+          </div>
+        </div>
       </AppContext.Provider>
     </div>
   );

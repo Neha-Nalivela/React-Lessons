@@ -1,0 +1,10 @@
+.Register, .Login{
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+.Login{
+    margin-left: 20px;
+}

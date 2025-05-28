@@ -1,52 +1,41 @@
-import React, { useContext, useState } from 'react';
-import { AppContext } from './App21';
-
+import React, { useState } from "react";
+import { AppContext } from "./App21";
+import { useContext } from "react";
 export default function Register() {
-  const { setMessage } = useContext(AppContext);
-  const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleRegister = (e) => {
-    e.preventDefault();
-    if (email && username && password) {
-      setMessage('Registered Successfully!');
-    } else {
-      setMessage('All fields are required');
-    }
+  const { users, setUsers } = useContext(AppContext);
+  const [user, setUser] = useState({});
+  const handleSubmit = () => {
+    setUsers([...users, user]);
   };
-
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={handleRegister}>
-        <p>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-        </p>
-        <p>
-            <input
-              type="text"
-              placeholder="Enter User Name"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-        </p>
-        <p>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            
-        </p>
-        <button type="submit">Submit</button>
-      </form>
+    <div style={{ margin: "30px" }}>
+      <h3>Register</h3>
+      <p>
+        <input
+          type="text"
+          placeholder="Name"
+          onChange={(e) => setUser({ ...user, name: e.target.value })}
+        />
+      </p>
+      <p>
+        <input
+          type="text"
+          placeholder="Email address"
+          onChange={(e) => setUser({ ...user, email: e.target.value })}
+        />
+      </p>
+      <p>
+        <input
+          type="password"
+          placeholder="New Password"
+          onChange={(e) => setUser({ ...user, pass: e.target.value })}
+        />
+      </p>
+      <button onClick={handleSubmit}>Submit</button>
+      <hr />
+      {users && users.map(value=>(
+        <li>{value.name}-{value.email}-{value.pass}</li>
+      ))}
     </div>
   );
 }
